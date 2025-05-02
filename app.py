@@ -85,7 +85,7 @@ with col3:
 #boton de analisis
 if st.button("Analizar"):
     if tuit.strip() == "":
-        st.warning("Por favor, escribe un tuit para analizar.")
+        st.warning("Por favor, escribe un tweets para analizar.")
     else:
         texto_limpio = limpiar_texto(tuit)
 
@@ -101,7 +101,7 @@ if st.button("Analizar"):
                     break
 
         #mostrar resultado del sentimiento
-        st.subheader("Sentimiento del tuit:")
+        st.subheader("Sentimiento del tweets:")
         st.text(mostrar_sentimiento(pred_sent))
 
         #vectorizar para viralidad
@@ -114,8 +114,8 @@ if st.button("Analizar"):
         ajuste = 1 + (min(influencia, 100) / 100) * 0.2
         pred_final = max(int(pred_retuits * ajuste), 0)
 
-        st.subheader("Estimación de retuits:")
-        st.text(f"Se estima que este tuit podría tener alrededor de {pred_final} retuits.")
+        st.subheader("Estimación de retweets:")
+        st.text(f"Se estima que este tweets podría tener alrededor de {pred_final} retuits.")
 
         #grafica de resultados con plotly
         #distribución de sentimientos positivo, neutral, negativo
