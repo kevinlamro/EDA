@@ -66,8 +66,8 @@ def mostrar_sentimiento(valor):
         return "Negativo"
 
 #título
-st.markdown('<div class="titulo">Análisis de Tuits</div>', unsafe_allow_html=True)
-st.markdown('<div class="descripcion">Detecta el sentimiento y estima la viralidad de un tuit</div>', unsafe_allow_html=True)
+st.markdown('<div class="titulo">Analisis de tweets</div>', unsafe_allow_html=True)
+st.markdown('<div class="descripcion">Detecta el sentimiento y estima la viralidad de un tweets</div>', unsafe_allow_html=True)
 st.write("Ejemplo que puede usar: hoy fue un horrible dia, hoy fue un increible dia, no se que va a pasar mañana")
 
 
